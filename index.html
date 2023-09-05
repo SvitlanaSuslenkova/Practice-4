@@ -17,15 +17,18 @@ body {
   font-family: 'League Spartan', 'Times New Roman', sans-serif;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-  .container {
-width: 77%;
+  main {
+/*width: 77%;*/
 max-width: 1110px;
 max-height: 585px;
-margin: auto;
-margin-top: 8.06vw;
-padding: 1px;
+margin: 24px;
 }
 
 .dtop, .dbot, .mtop, .mbot {
@@ -53,16 +56,16 @@ position: fixed;
 bottom:0;
 }
 
-.text {
+header {
 width: 38.74%;
 float: left;
 max-width: 430px;
 }
 
 h1 {
-font-size: 55px;
+font-size: 3.44rem;
 font-weight: 700;
-line-height: 49px;
+line-height: 3.06rem;
 letter-spacing: -1.65px;
 text-align: left;
 color: hsl(300, 43%, 22%);
@@ -70,7 +73,7 @@ color: hsl(300, 43%, 22%);
 
 h2 {
 margin-bottom: 4.44vw;
-font-size: 19px;
+font-size: 1.19rem;
 line-height: 131.5%;
 letter-spacing: -0.475px;
 text-align: left;
@@ -83,18 +86,17 @@ width: 48.65%;
 min-width: 445px;
 float: right;
 margin-top: 4vw;
-
-
 display: flex;
 flex-direction: column;
 justify-content: center; 
+flex-shrink: 0.5;
 }
 
 .stars {
 display: flex;
 margin-right: 1vw;
 justify-content: center;
-align-items: center;
+align-items: ceter;
 }
 
 .stars img {
@@ -107,7 +109,8 @@ color: hsl(300, 43%, 22%);
 border-radius: 6px; 
 font-weight: 700;
 letter-spacing: 0.48px;
-width: 82.41%;
+/*width: 82.41%;*/
+width: 444px;
 min-height: 56px;
 height: auto;
 font-size: 16px;
@@ -116,7 +119,7 @@ margin-bottom: 16px;
 display: flex;
 justify-content: center;
 align-items: center;
-float: none;
+padding-inline: 8px;
 }
 
 .rated-1 {align-self: start;}
@@ -129,6 +132,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 flex-wrap: wrap;
+align-items: stretch;
   
 }
 .reviewcolton, .reviewirene, .reviewanne {
@@ -141,9 +145,9 @@ padding: 16px 32px;
 font-size: 17px;
 }
 
-.reviewcolton {transform: translate(0,0);}
-.reviewirene {transform: translate(0,1vw);}
-.reviewanne {transform: translate(0,2vw);}
+.reviewcolton { transform: translate(0,0);}
+.reviewirene { transform: translate(0,1vh);}
+.reviewanne {transform: translate(0,2vh);}
 
 #colton, #irene, #anne {
 float: left;
@@ -195,9 +199,7 @@ letter-spacing: -0.136px;
 
 .attribution {
         font-size: 11px;
-        text-align: center;
-      
-        
+        text-align: center;            
         margin-top: 64px;
              }
       .attribution a {
@@ -206,9 +208,15 @@ letter-spacing: -0.136px;
 
 @media only screen and (max-width: 962px) {
 
-  .container {
+  body {
+    align-items: start;
+    justify-content: start;
+  }
+
+  main {
 width: 87.2%;
 z-index: -2;
+
 }
 
 .dtop, .dbot {
@@ -233,7 +241,7 @@ bottom:0;
 left: 0;
 }
 
-.text {
+header {
 width: 100%;
 float: none;
 margin:auto;
@@ -283,7 +291,6 @@ margin: auto;
 margin-bottom: 16px;
 font-size: 16px;
 text-align: center;
-float:none;
 }
 
 .stars {
@@ -298,9 +305,8 @@ align-items: center;
   width: 100%;
   margin-top: 32px;
   flex-direction: column;
-  justify-content:none;
+  /*justify-content:none;*/
   min-width: 0;
-  float: none;
 }
 
 .reviewcolton, .reviewirene, .reviewanne {
@@ -316,10 +322,7 @@ align-items: center;
   font-weight: 400;
   line-height: 122%;
   letter-spacing: -0.136px;
-  transform: none;
-  min-width: 0;
-  float: none;
-}
+ }
 }/*media*/
 
 @media only screen and (max-width: 369px) {
@@ -332,17 +335,17 @@ padding: 0;
     </style>
   </head>
   <body>
-<div class="container">
+<main>
 
-    <div class="text">
+    <header>
     <h1>10,000+ of our users love our products.</h1>
 
     <h2>We only provide great products combined with excellent customer service.
     See what our satisfied customers are saying about our services.</h2>
-  </div>
+    </header>
 
-  <div class="allrated">
-   <div class="rated rated-1">
+  <section class="allrated">
+   <div class="rated-1">
     <div class="stars">
        <img src="icon-star2.svg" alt="" width="17px" height="16px">
        <img src="icon-star2.svg" alt="" width="17px" height="16px">
@@ -353,7 +356,7 @@ padding: 0;
     Rated 5 Stars in Reviews
    </div>
    
-  <div class="rated rated-2">
+  <div class="rated-2">
     <div class="stars">
         <img src="icon-star2.svg" alt="" width="17px" height="16px">
         <img src="icon-star2.svg" alt="" width="17px" height="16px">
@@ -364,7 +367,7 @@ padding: 0;
     Rated 5 Stars in Report Guru
   </div>
 
-   <div class="rated rated-3">
+   <div class="rated-3">
     <div class="stars">
         <img src="icon-star2.svg" alt="" width="17px" height="16px">
         <img src="icon-star2.svg" alt="" width="17px" height="16px">
@@ -374,34 +377,34 @@ padding: 0;
     </div>
     Rated 5 Stars in BestTech
    </div>
-  </div>
+  </section>
 
-  <div class="allreviews">
+  <article class="allreviews">
   <div class="reviewcolton">
-      <div class="clearfix"><div id="colton"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
+      <div id="colton"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
       <div class="nameverified"><p class="name">Colton Smith </p>
-      <p class="verified">Verified Buyer</p></div></div>
+      <p class="verified">Verified Buyer</p></div>
       <p class="reviewtext">"We needed the same printed design as the one we had ordered a week prior.
     Not only did they find the original order, but we also received it in time.
     Excellent!"</p>
-  </div>
+      </div>
 
   <div class="reviewirene">
-    <div class="clearfix"><div id="irene"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
+    <div id="irene"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
     <div class="nameverified"><p class="name">Irene Roberts </p>
-    <p class="verified">Verified Buyer</p></div></div>
+    <p class="verified">Verified Buyer</p></div>
     <p class="reviewtext">"Customer service is always excellent and very quick turn around. Completely
       delighted with the simplicity of the purchase and the speed of delivery."</p>
-  </div>
+    </div>
     
   <div class="reviewanne">
-    <div class="clearfix"><div id="anne"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
+    <div id="anne"><img  src="dot.jpg" alt="" width="1px" height="1px"></div>
     <div class="nameverified"><p class="name">Anne Wallace </p>
-    <p class="verified">Verified Buyer</p></div></div>
+    <p class="verified">Verified Buyer</p></div>
     <p class="reviewtext">"Put an order with this company and can only praise them for the very high
       standard. Will definitely use them again and recommend them to everyone!"</p>
-  </div>
-</div>   
+    </div>
+  </article>   
 
 <img class="dtop" src="bg-pattern-top-desktop.svg" alt="" width="584px" height="362px">
 <img class="dbot" src="bg-pattern-bottom-desktop.svg" width="1085px" height="673px">
@@ -414,7 +417,7 @@ padding: 0;
         >Frontend Mentor</a
       >. Coded by <a href="#">Suslenkova Svitlana</a>.
     </div>
-  </div> <!--container-->
+  </main>
 
   </body>
 </html>
